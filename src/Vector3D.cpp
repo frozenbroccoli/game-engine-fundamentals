@@ -86,3 +86,11 @@ inline Vector3D Cross(const Vector3D& a, const Vector3D& b) {
     );
 }
 
+inline Vector3D Project(const Vector3D& a, const Vector3D& b) {
+    return b * (Dot(a, b) / Dot(b, b));
+}
+
+inline Vector3D Reject(const Vector3D& a, const Vector3D& b) {
+    return a - b * (Dot(a, b) / Dot(b, b));
+}
+
